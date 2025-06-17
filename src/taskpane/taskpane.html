@@ -22,12 +22,12 @@
 
 <body class="ms-font-m ms-welcome ms-Fabric">
     <header class="ms-welcome__header ms-bgColor-neutralLighter">
-        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
     </header>
     <section id="sideload-msg" class="ms-welcome__main">
         <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <div>Hello <label id="user-name"></label> !</div>
         <button class="ms-Button" id="create-table">Create Table</button><br/>
         <button class="ms-Button" id="create-chart">Create Chart</button><br/>
         <button class="ms-Button" id="filter-table">Filter Table</button><br/>
@@ -35,7 +35,7 @@
         
         <button class="ms-Button" id="freeze-header">Freeze Header</button><br/>
         <button class="ms-Button" id="open-dialog">Open Dialog</button><br/>
-        <label id="user-name"></label><br/><br/>
+
 
         <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
         <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
