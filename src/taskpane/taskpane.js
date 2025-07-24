@@ -17,6 +17,7 @@ Office.onReady((info) => {
     document.getElementById("sideload-msg").style.display = "none";
     document.getElementById("app-body").style.display = "flex";
   }
+
 });
 
 async function createTable() {
@@ -71,6 +72,7 @@ async function filterTable() {
   });
 }
 
+let ascendingSort = true;
 async function sortTable() {
   await Excel.run(async (context) => {
     // TODO1: Queue commands to sort the table by Merchant name.
@@ -79,10 +81,13 @@ async function sortTable() {
     const sortFields = [
       {
         key: 3, // Merchant column
-        ascending: false,
+        ascending: !ascendingSort,
       },
     ];
-
+    ascendingSort = !ascendingSort;
+    console.log(ascendingSort);
+    
+    document.getElementById("ascendingSort").innerHTML = ascendingSort.toString();
     expensesTable.sort.apply(sortFields);
 
     await context.sync();
@@ -127,7 +132,7 @@ function openDialog() {
   // TODO1: Call the Office Common API that opens a dialog.
   Office.context.ui.displayDialogAsync(
     "https://localhost:3000/popup.html",
-    { height: 30, width: 40 },
+    { height: 25, width: 40,  },
 
     // TODO2: Add callback parameter.
     function (result) {
