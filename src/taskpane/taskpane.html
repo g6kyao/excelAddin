@@ -14,7 +14,8 @@
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
 
     <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
-    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/>
+    <link rel="stylesheet"
+        href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css" />
 
     <!-- Template styles -->
     <link href="taskpane.css" rel="stylesheet" type="text/css" />
@@ -24,20 +25,33 @@
     <header class="ms-welcome__header ms-bgColor-neutralLighter">
     </header>
     <section id="sideload-msg" class="ms-welcome__main">
-        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+        <h2 class="ms-font-xl">Please <a target="_blank"
+                href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a>
+            your add-in to see app body.</h2>
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none;">
-        <div>Hello <label id="user-name"></label> !</div>
-        <button class="ms-Button" id="create-table">Create Table</button><br/>
-        <button class="ms-Button" id="create-chart">Create Chart</button><br/>
-        <button class="ms-Button" id="filter-table">Filter Table</button><br/>
-        <button class="ms-Button" id="sort-table">Sort Table</button><br/>
+        <div style="color: crimson;">Hello <label id="user-name"></label> !</div>
+        <div>
+            <button class="ms-Button" id="create-table">Create Table</button>
+            <button class="ms-Button" id="create-chart">Create Chart</button>
+        </div>
+        <br />
+
+        <div>
+            <button class="ms-Button" id="filter-table">Filter Table</button>
+            <button class="ms-Button" id="sort-table">Sort Table</button>
+        </div>
+        <br />
+
         <label id="ascendingSort"></label>
-        <button class="ms-Button" id="freeze-header">Freeze Header</button><br/>
-        <button class="ms-Button" id="open-dialog">Open Dialog</button><br/>
+        <div>
+            <button class="ms-Button" id="freeze-header">Freeze Header</button>
+            <button class="ms-Button" id="open-dialog">Open Dialog</button>
+        </div>
+        <br />
         <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
         <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-            <span class="ms-Button-label">Run ! </span>
+            <span class="ms-Button-label">Run !,,,, </span>
         </div>
         <p><label id="item-subject"></label></p>
     </main>
