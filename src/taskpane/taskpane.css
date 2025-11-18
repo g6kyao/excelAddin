@@ -38,7 +38,7 @@
     align-items: center;
     -webkit-flex: 1 0 0;
     flex: 1 0 0;
-    padding: 10px 20px;
+    padding: 10px 30px;
  }
  
  .ms-welcome__main > h2 {
@@ -71,7 +71,7 @@
 
 .ms-Button.ms-Button--hero:hover .ms-Button-label,
 .ms-Button.ms-Button--hero:focus .ms-Button-label{
-  color: #005a9e;
+  color: red;
   cursor: pointer;
 }
 
