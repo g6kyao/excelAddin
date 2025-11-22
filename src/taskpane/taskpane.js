@@ -132,7 +132,7 @@ function openDialog() {
   // TODO1: Call the Office Common API that opens a dialog.
   Office.context.ui.displayDialogAsync(
     "https://localhost:3000/popup.html",
-    { height: 25, width: 40,  },
+    { height: 20, width: 30,  },
 
     // TODO2: Add callback parameter.
     function (result) {
