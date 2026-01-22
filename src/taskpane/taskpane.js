@@ -80,7 +80,11 @@ async function sortTable() {
     const expensesTable = currentWorksheet.tables.getItem("ExpensesTable");
     const sortFields = [
       {
-        key: 3, // Merchant column
+        key: 2, // Merchant column
+        ascending: !ascendingSort,
+      },
+      {
+        key: 0, // Date column
         ascending: !ascendingSort,
       },
     ];
@@ -99,6 +103,8 @@ async function createChart() {
     // TODO1: Queue commands to get the range of data to be charted.
     const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
     const expensesTable = currentWorksheet.tables.getItem("ExpensesTable");
+    console.log(expensesTable);
+    
     const dataRange = expensesTable.getDataBodyRange();
 
     // TODO2: Queue command to create the chart and define its type.
