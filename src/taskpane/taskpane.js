@@ -80,13 +80,9 @@ async function sortTable() {
     const expensesTable = currentWorksheet.tables.getItem("ExpensesTable");
     const sortFields = [
       {
-        key: 2, // Merchant column
+        key: 3, // Amount column
         ascending: !ascendingSort,
-      },
-      {
-        key: 0, // Date column
-        ascending: !ascendingSort,
-      },
+      }
     ];
     ascendingSort = !ascendingSort;
     console.log(ascendingSort);
